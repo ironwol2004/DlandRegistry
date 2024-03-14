@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "DLandRegistry_backend": {
+      "main": "src/DLandRegistry_backend/main.mo",
+      "type": "motoko"
+    },
+    "DLandRegistry_frontend": {
+      "dependencies": [
+        "DLandRegistry_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/DLandRegistry_frontend/src/index.html"
+      },
+      "source": [
+        "src/DLandRegistry_frontend/assets",
+        "dist/DLandRegistry_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
