@@ -5,16 +5,26 @@ import Bool "mo:base/Bool";
 import Buffer "mo:base/Buffer";
 
 actor {
-  stable var notes: [Text]=[];
-  public func addNote(note:Text){
-    let theProjectsBuffer : Buffer.Buffer<Text> = Buffer.Buffer(notes.size());
-    for (x in notes.vals()) {
+  type property={name:Text;
+    aadhar:Text;
+    address:Text;
+    id:Text;
+    city:Text;
+    state:Text;
+    code:Text};
+  stable var bps: [property]=[];
+  public func add(note:property){
+    let theProjectsBuffer : Buffer.Buffer<property> = Buffer.Buffer(bps.size());
+    for (x in bps.vals()) {
     theProjectsBuffer.add(x);
     };
     theProjectsBuffer.add(note);
-    notes:=theProjectsBuffer.toArray();
+    bps:=theProjectsBuffer.toArray();
   };
-  public query func get() : async [ Text]{
-    return notes;
+  public query func get() : async [property]{
+    return bps;
   };
+  public func empty(){
+    bps:=[];
+  }
 };

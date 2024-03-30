@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from "react";
 import { BrowserRouter as Router, Route,Redirect,Switch} from "react-router-dom";
-
+import { DLandRegistry_backend } from "../../declarations/DLandRegistry_backend";
 import AddMyProperty from "./pages/addmyproperty";
 import About from "./pages/about";
 import AllProperties from "./pages/allproperties";
@@ -8,17 +8,20 @@ import GetDetailsofYourProperty from "./pages/getdetailsofyourproperty";
 import Home from "./pages/home";
 import Header from "./common/elements/header";
 import Footer from "./common/elements/footer";
-import AllDetailsOfaProperty from "./pages/alldetailsofproperty";
+
 
 function App(){ 
 const [ps,setps]=useState([]);
 async function addProperty(p){
-    await setps((prevPs) => [...prevPs, p]);
-    console.log(ps);
+    await DLandRegistry_backend.add(p);
+    const x=await DLandRegistry_backend.get(); 
+    setps(x);
 }
     useEffect(()=>{
         async function t(){
         //get data from backend for the first time
+        const x= await DLandRegistry_backend.get();
+        setps(x);
         }
         t();
     }, []);
