@@ -13,13 +13,16 @@ function GetDetailsofYourProperty(props){
       };
     async function sub(event){
         console.log(props.ps);
+        var y=null;
         console.log(aadhar);console.log(id);
        for(var i=0;i<props.ps.length;i++){
         if(props.ps[i].id===id && props.ps[i].aadhar===aadhar){
-            setx(props.ps[i]);break;
+            setx(props.ps[i]);y=props.ps[i];break;
         }
        }
-       console.log(x);
+       if(y === null){
+        alert("Property Not Found!");
+       }
         event.preventDefault();
     }
     

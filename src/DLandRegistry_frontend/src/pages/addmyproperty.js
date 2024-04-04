@@ -18,7 +18,16 @@ function eventHandler(event) {
     async function sub(event){
         const newp=property;
         props.add(newp);
-        console.log(newp);
+        setProperty({
+            name:"",
+            aadhar:"",
+            address:"",
+            id:"",
+            city:"",
+            state:"",
+            code:""
+        });
+        alert("Property Added Successfully");
         event.preventDefault();
     }
     return <div>

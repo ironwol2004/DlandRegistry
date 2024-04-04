@@ -18,7 +18,10 @@
   },
   "dependencies": {
     "@dfinity/agent": "^1.0.1",
+    "@dfinity/auth-client": "",
+    "@dfinity/authentication": "",
     "@dfinity/candid": "^1.0.1",
+    "@dfinity/identity": "",
     "@dfinity/principal": "^1.0.1",
     "autoprefixer": "^10.4.18",
     "css-loader": "^6.10.0",
@@ -31,10 +34,7 @@
     "react-router-dom": "^5",
     "style-loader": "^3.3.4",
     "ts-loader": "",
-    "web-vitals": "",
-    "@dfinity/auth-client": "",
-    "@dfinity/authentication": "",
-    "@dfinity/identity": ""
+    "web-vitals": ""
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
