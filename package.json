@@ -34,6 +34,7 @@
     "react-router-dom": "^5",
     "style-loader": "^3.3.4",
     "ts-loader": "",
+    "typewriter-effect": "^2.21.0",
     "web-vitals": ""
   },
   "devDependencies": {

@@ -13,15 +13,16 @@ import Footer from "./common/elements/footer";
 function App(){ 
 const [ps,setps]=useState([]);
 async function addProperty(p){
-    await DLandRegistry_backend.add(p);
-    const x=await DLandRegistry_backend.get(); 
-    setps(x);
+    // await DLandRegistry_backend.add(p);
+    // const x=await DLandRegistry_backend.get(); 
+    // setps(x);
+    setps([...ps,p]);
 }
     useEffect(()=>{
         async function t(){
         //get data from backend for the first time
-        const x= await DLandRegistry_backend.get();
-        setps(x);
+        // const x= await DLandRegistry_backend.get();
+        // setps(x);
         }
         t();
     }, []);

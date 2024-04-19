@@ -4,7 +4,7 @@ function Header(){
     return <nav className="bg-black flex justify-between py-4">
         <h3 className="font-extrabold text-lg px-6 text-red-600 select-none">DLR</h3>
         <ul className="flex space-x-6 px-6">
-            <NavLink to="/" className="text-white hover:cursor-pointer hover:text-slate-500 active:bg-white active:border-purple-800 active:border-2 active:text-purple-950" exact>Home</NavLink>
+            <NavLink to="/" className="text-white hover:cursor-pointer hover:text-slate-500" exact>Home</NavLink>
             <NavLink to="/getyourpropertydetails" className="text-white hover:cursor-pointer hover:text-slate-500">Get details of my property</NavLink>
             <NavLink to="/addmyproperty" className="text-white hover:cursor-pointer hover:text-slate-500">Add my property</NavLink>
             <NavLink to="/allproperties" className="text-white hover:cursor-pointer hover:text-slate-500">All Properties</NavLink>
