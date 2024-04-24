@@ -17,7 +17,7 @@ function AddMyProperty(props) {
     }
     async function sub(event) {
         const newp = property;
-        if (newp.aadhar.length == 12 && newp.address.length != 0 && newp.city.length != 0 && newp.state.length != 0 && newp.id.length != 0 && newp.code.length == 6) {
+        if (newp.aadhar.length === 12 && newp.address.length != 0 && newp.city.length != 0 && newp.state.length != 0 && newp.id.length != 0 && newp.code.length === 6) {
             props.add(newp);
             setProperty({
                 name: "",
@@ -33,6 +33,7 @@ function AddMyProperty(props) {
         }
         else {
             alert("Invalid credentails!");
+            event.preventDefault();
             return;
         }
     }
@@ -73,7 +74,7 @@ function AddMyProperty(props) {
 
                     <div>
                         <label className="text-sm font-semibold text-gray-600 block">Pincode</label>
-                        <input type="text" name="pincode" value={property.pincode} onChange={eventHandler} required className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                        <input type="number" name="code" value={property.code} onChange={eventHandler} required className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" />
                     </div>
                     <button type="submit" className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         Add Property

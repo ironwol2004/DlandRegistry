@@ -29,7 +29,7 @@ function GetDetailsofYourProperty(props) {
 
     return (
         <>
-            <div className="p-6 max-w-xl mx-auto bg-slate-50 rounded-xl shadow-md flex flex-col items-center space-x-4 my-6">
+            <div className="hover:bg-slate-200 p-6 max-w-xl mx-auto bg-slate-50 rounded-xl shadow-md flex flex-col items-center space-x-4 my-6">
                 <div>{!x && (
                     <div className="flex justify-center ">
                         <div className="flex-col justify-center align-middle items-center ">
