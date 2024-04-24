@@ -13,7 +13,6 @@ function GetDetailsofYourProperty(props) {
         setId(event.target.value);
     };
     async function sub(event) {
-        console.log(props.ps);
         var y = null;
         console.log(aadhar); console.log(id);
         for (var i = 0; i < props.ps.length; i++) {

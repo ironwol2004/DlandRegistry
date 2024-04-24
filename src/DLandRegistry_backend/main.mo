@@ -3,7 +3,7 @@ import Array "mo:base/Array";
 import List "mo:base/List";
 import Bool "mo:base/Bool";
 import Buffer "mo:base/Buffer";
-
+import Nat "mo:base/Nat";
 actor {
   type property={name:Text;
     aadhar:Text;
