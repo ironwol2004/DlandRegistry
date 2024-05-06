@@ -9,9 +9,9 @@ function Home(props) {
 
         
 
-        <h1 className="text-4xl font-bold text-purple-950 text-center">
+        <h1 className="text-4xl font-bold text-cyan-600 text-center">
           
-        <div className="text-4xl font-bold text-purple-950 text-center">
+        <div className="text-4xl font-bold text-cyan-600 text-center">
           <Typewriter
             options={{
               strings: ['Your Land', 'Your Legacy'],
@@ -29,7 +29,7 @@ function Home(props) {
         <img className="h-60" src={pic} alt="Home Image" />
       </div>
       <div className="flex flex-col justify-center items-center bg-white shadow-md rounded-lg p-10 m-5 my-10">
-        <h2 className="text-3xl font-bold text-purple-950 text-center">Why Choose Us?</h2>
+        <h2 className="text-3xl font-bold text-cyan-600 text-center">Why Choose Us?</h2>
         <p className="mt-4 text-blue-900 text-center ">
           We provide the best services for securing your digital assets. Our platform is reliable, secure, and trusted by lot of users.
         </p>

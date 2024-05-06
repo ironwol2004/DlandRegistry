@@ -47,8 +47,20 @@ function AddMyProperty(props) {
                     <p className="mt-1 text-sm leading-6 text-gray-600">Use correct details of your property according to registry documents.</p>
                     <div>
                         <label className="text-sm font-semibold text-gray-600 block">Name</label>
-                        <input type="text" name="name" value={property.name} onChange={eventHandler} required className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                        <input
+                            type="text"
+                            name="name"
+                            value={property.name}
+                            onChange={eventHandler}
+                            onKeyPress={event => {
+                                if (!/[A-Za-z]/.test(event.key)) {
+                                    event.preventDefault();
+                                }
+                            }}
+                            className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        />
                     </div>
+
                     <div>
                         <label className="text-sm font-semibold text-gray-600 block">Aadhar Number</label>
                         <input type="number" name="aadhar" value={property.aadhar} onChange={eventHandler} required className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" />

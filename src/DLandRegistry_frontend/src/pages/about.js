@@ -1,13 +1,12 @@
 import React from "react";
-import pic from "../images/about.jpg";
 
 function About() {
     return (
         <div className="bg-gray-100 py-10">
-            <div className="relative h-64 mx-auto shadow-lg card bg-white max-w-4xl">
-                <img src={pic} alt="About us" className="opacity-80 h-full w-full object-cover" />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                    <p className="font-bold text-3xl text-indigo-700 bg-white bg-opacity-75 rounded px-4 bg-transparent">Revolutionizing Land Ownership, Block by Block</p>
+            <div className="relative h-64 mx-auto shadow-lg card bg-blue-300 max-w-4xl">
+                <img className="opacity-80 h-full w-full object-cover" />
+                <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                    <p className="font-bold text-4xl text-indigo-700 bg-opacity-75 px-4 bg-transparent">Revolutionizing Land Ownership, Block by Block</p>
                 </div>
             </div>
             <div className="flex flex-wrap justify-center gap-10 mt-10 mb-10">
